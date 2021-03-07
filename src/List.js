@@ -3,12 +3,15 @@ import { connect } from "react-redux";
 import { deleteTodo } from "./actions";
 
 const List = (props) => {
+  console.log(props);
   return (
     <ul>
-      {props.bookName.map((todo, index, id) => (
+      {props.bookName.map((todo, index) => (
         <li key={index}>
-          {todo.bookName}{" "}
-          <button onClick={() => props.dispatch(deleteTodo())}>Delete</button>
+          {todo.bookName}
+          <button onClick={() => props.dispatch(deleteTodo(todo.id))}>
+            Delete
+          </button>
         </li>
       ))}
     </ul>

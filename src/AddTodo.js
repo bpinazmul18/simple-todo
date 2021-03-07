@@ -14,7 +14,7 @@ const AddTodo = (props) => {
         }}
       >
         <label htmlFor="addBookList">Add Book List</label> <br /> <br />
-        <input id="todo" name="bookName" type="text" />
+        <input id="todo" name="bookName" type="text" required />
         <input type="submit" value="Submit" />
       </form>
     </div>
